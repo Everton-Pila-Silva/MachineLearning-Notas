@@ -4,9 +4,10 @@
 
     // Load the image model and setup the webcam
     async function init() {
+        
         const modelURL = URL + "model.json";
         const metadataURL = URL + "metadata.json";
-
+        
         // load the model and metadata
         // Refer to tmImage.loadFromFiles() in the API to support files from a file picker
         // or files from your local hard drive
@@ -24,11 +25,12 @@
         // append elements to the DOM
         document.getElementById("webcam-container").appendChild(webcam.canvas);
         labelContainer = document.getElementById("label-container");
+        document.getElementById('some').innerHTML = '';
         for (let i = 0; i < maxPredictions; i++) { // and class labels
             labelContainer.appendChild(document.createElement("div"));
         }
     }
-
+    
     async function loop() {
         webcam.update(); // update the webcam frame
         await predict();
@@ -49,3 +51,4 @@
         }
     }
 }
+
