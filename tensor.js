@@ -62,12 +62,8 @@
         }  
       
         }
-      
+      function toca(){
  
-    }
-     
-function toca(){
-      const prediction = await model.predict(webcam.canvas);
 
     while( j == 0){
         if(prediction[i].className = '2 Reais' ){
@@ -92,3 +88,6 @@ function toca(){
             }
     }
 }
+ 
+    }
+     
