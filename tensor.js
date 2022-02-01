@@ -45,37 +45,37 @@
         
         for (let i = 0; i < maxPredictions; i++) {
     
-         if(prediction[i].probability > 0.95){
+         if(prediction[i].probability > 0.90){
             const classPrediction =
                 prediction[i].className + ": " + prediction[i].probability.toFixed(2);
             labelContainer.childNodes[i].innerHTML = classPrediction;
+             
+               if(prediction[i].className = '2 Reais' & prediction[i].probability == 0.94 ){
+                const music = new Audio('2reais.mp3');
+                music.play();
+              
+             }
+             if(prediction[i].className = '10 Reais'  & prediction[i].probability == 0.94
+                const music = new Audio('10reais.mp3');
+                music.play();
+               
+            }
+              if(prediction[i].className = '5 Reais'  & prediction[i].probability == 0.94){
+                const music = new Audio('5reais.mp3');
+                music.play();
+               
+            }
+               if(prediction[i].className = '50 Reais'  & prediction[i].probability == 0.94){
+                const music = new Audio('50reais.mp3');
+                music.play();
+                
+            }
          }else{
             labelContainer.childNodes[i].innerHTML = "-";
          
         }  
             
-            if(prediction[i].className = '2 Reais' & prediction[i].probability > 0.99 ){
-                const music = new Audio('2reais.mp3');
-                music.play();
-              
-             }
-             if(prediction[i].className = '10 Reais'  & prediction[i].probability > 0.99){
-                const music = new Audio('10reais.mp3');
-                music.play();
-               
-            }
-              if(prediction[i].className = '5 Reais'  & prediction[i].probability > 0.99  ){
-                const music = new Audio('5reais.mp3');
-                music.play();
-               
-            }
-               if(prediction[i].className = '50 Reais'  & prediction[i].probability > 0.99){
-                const music = new Audio('50reais.mp3');
-                music.play();
-                
-            }
-             
-
+         
       
         }
   
