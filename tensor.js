@@ -66,12 +66,14 @@
                 music.play();
                 
             }
-                if(prediction[i].className = '50 Reais'){
+               if(prediction[i].className = '50 Reais'){
                 const music = new Audio('50reais.mp3');
                 music.play();
-            }else{
-                j = 1;
             }
+           else{
+               j = 1;
+           }
+       }
              
         }else{
             labelContainer.childNodes[i].innerHTML = "-";
@@ -80,7 +82,5 @@
          
     }
         
-
-       }
 }
 
