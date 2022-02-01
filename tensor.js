@@ -70,13 +70,16 @@
                 music.play();
               j = 1;
             }
+          
              
-             if(prediction[i].probability < 0.95){
+             
+         }
+  
+          else if(prediction[i].probability < 0.85){
                 j = 0;
              }
-             
-             
-         }else{
+            
+            else{
             labelContainer.childNodes[i].innerHTML = "-";
          
         }  
