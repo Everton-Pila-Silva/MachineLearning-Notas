@@ -70,17 +70,18 @@
                 music.play();
                    j = 1;
             }
-       }
+       }else{
+            labelContainer.childNodes[i].innerHTML = "-";
+         
+        } 
+            
            if(prediction[i].probability < 0.95){
                 j = 0;
            }
             
-        }else{
-            labelContainer.childNodes[i].innerHTML = "-";
-         
-        }    
+      
         }
-        
+      
      
          
     }
