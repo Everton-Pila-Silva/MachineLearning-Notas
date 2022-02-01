@@ -50,22 +50,24 @@
                 prediction[i].className + ": " + prediction[i].probability.toFixed(2);
             labelContainer.childNodes[i].innerHTML = classPrediction;
              
-              if(prediction[i].className = '2 Reais' & prediction[i].probability > 0.99 ){
+              if(prediction[i].className = '2 Reais' ){
+                   if(prediction[i].probability > 0.99){
                 const music = new Audio('2reais.mp3');
                 music.play();
               j ++;
+               }
              }
-             if(prediction[i].className = '10 Reais'  & prediction[i].probability > 0.99){
+             if(prediction[i].className = '10 Reais'){
                 const music = new Audio('10reais.mp3');
                 music.play();
                j ++;
             }
-              if(prediction[i].className = '5 Reais'  & prediction[i].probability > 0.99){
+              if(prediction[i].className = '5 Reais'){
                 const music = new Audio('5reais.mp3');
                 music.play();
                j ++;
             }
-               if(prediction[i].className = '50 Reais'  & prediction[i].probability > 0.99){
+               if(prediction[i].className = '50 Reais'){
                 const music = new Audio('50reais.mp3');
                 music.play();
                 j ++;
