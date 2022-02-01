@@ -75,7 +75,7 @@
              
          }
   
-          else if(prediction[i].probability < 0.85){
+          else if(prediction[i].probability < 0.30){
                 j = 0;
              }
             
