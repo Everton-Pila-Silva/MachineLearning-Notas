@@ -41,11 +41,14 @@
     async function predict() {
 
         const prediction = await model.predict(webcam.canvas);
+ 
+        
         for (let i = 0; i < maxPredictions; i++) {
-            if(prediction[i].probability > 0.95){
+         if(prediction[i].probability > 1.0){
             const classPrediction =
                 prediction[i].className + ": " + prediction[i].probability.toFixed(2);
             labelContainer.childNodes[i].innerHTML = classPrediction;
+             
               if(prediction[i].className = '2 Reais'){
                 const music = new Audio('2reais.mp3');
                 music.play();
@@ -65,6 +68,8 @@
         }else{
             labelContainer.childNodes[i].innerHTML = "-";
         }
+            
+         
     }
 }
 
