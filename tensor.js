@@ -44,7 +44,7 @@
  
         
         for (let i = 0; i < maxPredictions; i++) {
-         if(prediction[i].probability > 1.0){
+         if(prediction[i].probability > 0.95){
             const classPrediction =
                 prediction[i].className + ": " + prediction[i].probability.toFixed(2);
             labelContainer.childNodes[i].innerHTML = classPrediction;
