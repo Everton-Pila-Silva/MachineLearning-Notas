@@ -55,7 +55,7 @@
                 music.play();
               
              }
-             if(prediction[i].className = '10 Reais'  & prediction[i].probability == 0.94
+             if(prediction[i].className = '10 Reais'  & prediction[i].probability == 0.94){
                 const music = new Audio('10reais.mp3');
                 music.play();
                
