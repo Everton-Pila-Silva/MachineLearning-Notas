@@ -30,7 +30,7 @@
             labelContainer.appendChild(document.createElement("div"));
         }
     }
-    
+    var j = 0;
     async function loop() {
         webcam.update(); // update the webcam frame
         await predict();
@@ -41,7 +41,7 @@
     async function predict() {
 
         const prediction = await model.predict(webcam.canvas);
- var j = 0;
+
         
         for (let i = 0; i < maxPredictions; i++) {
     
