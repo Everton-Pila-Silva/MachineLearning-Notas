@@ -50,9 +50,12 @@
             labelContainer.childNodes[i].innerHTML = classPrediction;
         }else{
             labelContainer.childNodes[i].innerHTML = "-";
-        }
-            
-             if(prediction[i].className = '2 Reais'){
+        }    
+         
+    }
+        
+        
+         if(prediction[i].className = '2 Reais'){
                 const music = new Audio('2reais.mp3');
                 music.play();
               
@@ -71,7 +74,5 @@
                 const music = new Audio('50reais.mp3');
                 music.play();
             }
-         
-    }
 }
 
