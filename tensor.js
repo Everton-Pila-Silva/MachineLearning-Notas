@@ -48,13 +48,9 @@
             const classPrediction =
                 prediction[i].className + ": " + prediction[i].probability.toFixed(2);
             labelContainer.childNodes[i].innerHTML = classPrediction;
-        }else{
-            labelContainer.childNodes[i].innerHTML = "-";
-        }    
-         
-    }
-        
-        
+              var j = 0;
+       while(j = 0){
+           
          if(prediction[i].className = '2 Reais'){
                 const music = new Audio('2reais.mp3');
                 music.play();
@@ -73,6 +69,18 @@
                 if(prediction[i].className = '50 Reais'){
                 const music = new Audio('50reais.mp3');
                 music.play();
+            }else{
+                j = 1;
             }
+             
+        }else{
+            labelContainer.childNodes[i].innerHTML = "-";
+            j = 1;
+        }    
+         
+    }
+        
+
+       }
 }
 
