@@ -41,7 +41,7 @@
     async function predict() {
 
         const prediction = await model.predict(webcam.canvas);
-
+        
         
         for (let i = 0; i < maxPredictions; i++) {
     
@@ -50,11 +50,26 @@
                 prediction[i].className + ": " + prediction[i].probability.toFixed(2);
             labelContainer.childNodes[i].innerHTML = classPrediction;
              
-                toca();
-             
-             if(prediction[i].probability < 0.20){
-                j = 0;
-           }
+            if(prediction[i].className = '2 Reais' & prediction[i].probability = 0.99 ){
+                const music = new Audio('2reais.mp3');
+                music.play();
+              
+             }
+             if(prediction[i].className = '10 Reais'  & prediction[i].probability = 0.99){
+                const music = new Audio('10reais.mp3');
+                music.play();
+               
+            }
+              if(prediction[i].className = '5 Reais'  & prediction[i].probability = 0.99 ){
+                const music = new Audio('5reais.mp3');
+                music.play();
+               
+            }
+               if(prediction[i].className = '50 Reais'  & prediction[i].probability = 0.99){
+                const music = new Audio('50reais.mp3');
+                music.play();
+                
+            }
              
        }else{
             labelContainer.childNodes[i].innerHTML = "-";
@@ -62,32 +77,7 @@
         }  
       
         }
-      function toca(){
- 
-
-    while( j == 0){
-        if(prediction[i].className = '2 Reais' ){
-                const music = new Audio('2reais.mp3');
-                music.play();
-              j = 1;
-             }
-             if(prediction[i].className = '10 Reais'){
-                const music = new Audio('10reais.mp3');
-                music.play();
-                j = 1;
-            }
-              if(prediction[i].className = '5 Reais' ){
-                const music = new Audio('5reais.mp3');
-                music.play();
-                j = 1;
-            }
-               if(prediction[i].className = '50 Reais'){
-                const music = new Audio('50reais.mp3');
-                music.play();
-                   j = 1;
-            }
-    }
-}
+  
  
     }
      
