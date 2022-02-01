@@ -67,7 +67,7 @@
     }
      
 function toca(){
-    while( j == 1){
+    while( j == 0){
         if(prediction[i].className = '2 Reais' ){
                 const music = new Audio('2reais.mp3');
                 music.play();
