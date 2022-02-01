@@ -70,7 +70,7 @@
                 music.play();
               j = 1;
             }
-             if(prediction[i].probability < 0.70){
+             if(prediction[i].probability < 0.80){
                 j = 0;
              }
              
