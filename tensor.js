@@ -44,41 +44,44 @@
  
         
         for (let i = 0; i < maxPredictions; i++) {
+            var j = 0;
          if(prediction[i].probability > 0.95){
             const classPrediction =
                 prediction[i].className + ": " + prediction[i].probability.toFixed(2);
             labelContainer.childNodes[i].innerHTML = classPrediction;
-              var j = 0;
-       while(j = 0){
-           
-         if(prediction[i].className = '2 Reais'){
+             
+              if(prediction[i].className = '2 Reais' & j = 0){
                 const music = new Audio('2reais.mp3');
                 music.play();
-              
+              j = 1;
              }
-             if(prediction[i].className = '10 Reais'){
+             if(prediction[i].className = '10 Reais' & j = 0){
                 const music = new Audio('10reais.mp3');
                 music.play();
-                
+                j = 1;
             }
-              if(prediction[i].className = '5 Reais'){
+              if(prediction[i].className = '5 Reais' & j = 0){
                 const music = new Audio('5reais.mp3');
                 music.play();
-                
+                j = 1;
             }
-               if(prediction[i].className = '50 Reais'){
+               if(prediction[i].className = '50 Reais' & j = 0){
                 const music = new Audio('50reais.mp3');
                 music.play();
+                   j = 1;
             }
-           else{
-               j = 1;
-           }
        }
-             
+           if(prediction[i].probability < 0.95){
+                j = 0;
+           }
+            
         }else{
             labelContainer.childNodes[i].innerHTML = "-";
-            j = 1;
+         
         }    
+        }
+        
+     
          
     }
         
